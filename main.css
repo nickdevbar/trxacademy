@@ -1,0 +1,43 @@
+.heroSection{
+    background: url('./assets/img/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contentSection{
+    background: url('./assets/img//content.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contactSection{
+    background: rgb(252,191,36);
+    background: linear-gradient(45deg, rgba(252,191,36,1) 0%, rgba(189,145,36,1) 0%, rgba(41,37,36,1) 31%, rgba(28,25,26,1) 100%);
+}
+
+.testimonySection{
+    background: url('./assets/img/testimony.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.faqSection{
+    background: rgb(252,191,36);
+    background: linear-gradient(-152deg, rgba(252,191,36,1) 0%, rgba(189,145,36,1) 0%, rgba(41,37,36,1) 25%, rgba(28,25,26,1) 100%);
+}
+
+#promo {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .contactSection{
+        background: #1C191A;
+    }
+}
