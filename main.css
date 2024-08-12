@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: light;
+}
+
+body {
+    font-family: 'Montserrat', 'Open Sans',sans-serif !important;
+}
+
 .heroSection{
     background: url('./assets/img/hero.png');
     background-size: cover;
@@ -5,29 +26,29 @@
     background-repeat: no-repeat;
 }
 
-.contentSection{
+/* .contentSection{
     background: url('./assets/img//content.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
-.contactSection{
+/* .contactSection{
     background: rgb(252,191,36);
     background: linear-gradient(45deg, rgba(252,191,36,1) 0%, rgba(189,145,36,1) 0%, rgba(41,37,36,1) 31%, rgba(28,25,26,1) 100%);
-}
+} */
 
-.testimonySection{
+/* .testimonySection{
     background: url('./assets/img/testimony.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
-.faqSection{
+/* .faqSection{
     background: rgb(252,191,36);
     background: linear-gradient(-152deg, rgba(252,191,36,1) 0%, rgba(189,145,36,1) 0%, rgba(41,37,36,1) 25%, rgba(28,25,26,1) 100%);
-}
+} */
 
 #promo {
     position: sticky;

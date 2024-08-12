@@ -14,6 +14,8 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/wow.min.js"></script>
 
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             new WOW().init();
@@ -25,6 +27,31 @@
             scroll-behavior: smooth;
         }
     </style>
+
+    <style>
+        /* Ocultar animaciones en móviles */
+        @media (max-width: 768px) {
+            .wow {
+                visibility: visible !important;
+                animation: none !important;
+            }
+        }
+    </style>
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        // Inicializar Wow.js solo en vista de escritorio
+        if (window.innerWidth > 768) {
+            new WOW().init();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -66,76 +93,163 @@
         </div>
         <!-- SECTION 1 -->
         <div class="md:p-5 p-2 wow animate__animated animate__fadeInLeft" id="hero">
-            <div class="bg-stone-900 rounded-xl heroSection p-5 md:p-16">
+            <div class="bg-stone-900 rounded-xl heroSection p-6 md:p-20">
 
                 <div class="mb-3">
-                    <h1 class="text-gray-100 text-4xl md:text-5xl font-bold"><span class="text-amber-400">TRX</span>
-                        <span class="text-slate-300">| ACADEMY</span>
+                    <h1 class="text-gray-100 text-5xl md:text-6xl font-bold"><span class="text-amber-400">TRX</span>
+                        <span class="text-white">| ACADEMY</span>
                     </h1>
                 </div>
 
                 <div class="mb-3">
-                    <h2 class="text-gray-100 text-2xl md:text-3xl font-semibold"><span class="text-slate-200">APRENDE
-                            TRADING /<br>OBTÉN CAPITAL DE FONDEO</span></h2>
+                    <h2 class="text-gray-100 text-2xl md:text-3xl font-semibold hidden md:inline"><span
+                            class="text-yellow-200">APRENDE
+                            TRADING / OBTÉN CAPITAL DE FONDEO</span></h2>
                 </div>
 
                 <div>
-                    <h3 class="text-gray-100 text-base md:text-lg font-regular"><span class="text-slate-100">Domina el
+                    <h3 class="text-gray-100 md:text-xl text-lg font-regular py-2"><span class="text-slate-100">Domina
+                            el
                             Trading en Índices Sintéticos y Forex con nuestro curso intensivo. <br> Aprende estrategias
                             efectivas, análisis técnico, fundamental e institucional. <br> Prepárate para operar con
                             confianza y <br> únete a nuestras clases en vivo.</span></h3>
                 </div>
 
-                <div class="mt-5 flex"><a href="" class="btn btn-warning me-2">Inscribete ahora <i
-                            class="fa-light fa-pen-to-square"></i></a> <a href="" class="btn btn-outline btn-warning">
-                        Más Información <i class="fa-light fa-arrow-right"></i></a></div>
+                <div class="mt-5 flex flex-col md:flex-row gap-5">
+                    <a href="" class="btn btn-warning btn-lg w-full md:w-auto ">Inscribete ahora <i
+                            class="fa-light fa-pen-to-square"></i></a>
+
+                    <a href="" class="btn btn-outline btn-warning btn-lg w-full md:w-auto">
+                        Más Información <i class="fa-light fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
+
         <!-- SECTION 2 -->
         <div class="md:p-5 p-2 wow animate__animated animate__fadeInRight" id="contenido">
             <div class="bg-stone-900 rounded-xl contentSection p-4 md:p-12">
 
-                <div class="text-end">
+                <div class="md:py-0 md:px-0 py-2 px-2">
+                    <h2 class="text-2xl md:text-4xl font-semibold"><span class="text-amber-400">PROGRAMA DE
+                            FORMACIÓN</span></h2>
+                </div>
 
-                    <div class="">
-                        <h2 class="text-2xl md:text-3xl font-semibold"><span class="text-amber-300">PROGRAMA DE
-                                FORMACIÓN</span></h2>
+                <div class="flex flex-col md:flex-row justify-between">
+
+
+                    <div class="md:p-10 p-6 md:pb-0">
+                        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Curso de Trading de Índices Sintéticos
+                                </h3>
+                            </li>
+
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Curso de Trading de Forex
+                                </h3>
+                            </li>
+
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Fundamentos Principales del Trading
+                                </h3>
+                            </li>
+
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Análisis Técnico, Fundamental e Institucional
+                                </h3>
+                            </li>
+
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Cómo Operar Correctamente Los Mercados
+                                </h3>
+                            </li>
+
+                            <li class="mb-10 ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Psicotrading Y La Mentalidad Al Operar
+                                </h3>
+                            </li>
+
+                            <li class="ms-6">
+                                <span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
+                                    <i class="text-white fa-regular fa-check"></i>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
+                                    Estrategias Probadas Para Los índices
+                                </h3>
+                            </li>
+                        </ol>
                     </div>
 
-                    <div class="">
-                        <ul class="my-8 space-y-2 text-slate-50">
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Curso de Trading de Índices Sintéticos
-                                <i class="ms-2 text-amber-300 fa-light fa-check"></i>
-                            </li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Curso de Trading de Forex <i
-                                    class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Fundamentos Principales del Trading <i
-                                    class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Qué son Índices Sintéticos <i
-                                    class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Qué es Forex <i
-                                    class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Análisis Técnico, Fundamental e
-                                Institucional <i class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Cómo operar correctamente los mercados
-                                <i class="ms-2 text-amber-300 fa-light fa-check"></i>
-                            </li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Psicotrading y la mentalidad al operar
-                                <i class="ms-2 text-amber-300 fa-light fa-check"></i>
-                            </li>
-                            <li class="flex justify-end items-center space-x-3 hover:text-amber-300 cursor-pointer">Estrategias probadas para los índices <i
-                                    class="ms-2 text-amber-300 fa-light fa-check"></i></li>
-                        </ul>
-                    </div>
+                    <div class="md:text-end text-center md:py-0 py-4 wow animate__animated animate__fadeInDown">
 
-                    <div class="bg-amber-300 text-slate-800 md:p-3 p-2 rounded-xl">
-                        <h3>
-                            Al finalizar el curso, tendrás la oportunidad de acceder a un <br> <span
-                                class="font-bold">capital de fondeo de 10K a través de <a
-                                    href="https://toptenfunding.com" target="_blank">Top Ten Funding</a></span>
+                        <div class="mockup-phone">
+                            <div class="camera"></div>
+                            <div class="display">
+                                <div class="artboard artboard-demo phone-1">
 
 
-                        </h3>
+                                    <div class="chat chat-start px-6 mb-4">
+                                        <div class="chat-bubble text-start p-5">
+                                            <h3>
+                                                ¿Que obtengo al finalizar el programa?</span>
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="chat chat-end px-6">
+                                        <div class="chat-bubble chat-bubble-warning text-start p-5">
+                                            <h3>
+                                                ¡¡Tendrás la oportunidad de acceder a <br> <span class="font-bold">10K
+                                                    de
+                                                    capital de fondeo a través de <br>
+                                                    Top Ten Funding</span>!!
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -144,16 +258,17 @@
         </div>
         <!-- SECTION 3 -->
         <div class="md:p-5 p-2" id="modalidad">
-            <div class="bg-stone-900 rounded-xl ">
+            <div class="bg-stone-800 rounded-xl ">
                 <div>
 
                     <div class="flex w-full flex-col lg:flex-row md:p-12 p-6 2xl:p-20">
 
-                        <div class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
+                        <div
+                            class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
                             <div class="text-center">
-                                <h4 class="md:text-6xl text-4xl text-amber-100 p-16"><i
+                                <h4 class="md:text-6xl text-4xl text-yellow-100 p-16"><i
                                         class="fa-solid fa-users fa-xl"></i></h4>
-                                <h5 class="md:text-4xl text-2xl font-semibold text-amber-300">PRESENCIALES</h5>
+                                <h5 class="md:text-4xl text-2xl font-semibold text-yellow-300">PRESENCIALES</h5>
                                 <p class="text-lg text-slate-100 md:p-6 p-3">Ofrecemos clases de trading presenciales en
                                     Cúcuta, Norte de Santander. Aprende estrategias de mercado y análisis financiero en
                                     un entorno interactivo.</p>
@@ -167,17 +282,18 @@
 
                         <div class="divider lg:divider-horizontal 2xl:px-20">Ó</div>
 
-                        <div class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInDown">
+                        <div
+                            class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInDown">
                             <div class="text-center">
-                                <h4 class="md:text-6xl text-4xl text-amber-100 p-16"><i
+                                <h4 class="md:text-6xl text-4xl text-yellow-100 p-16"><i
                                         class="fa-solid fa-laptop-mobile fa-xl"></i></h4>
-                                <h5 class="md:text-4xl text-2xl font-semibold text-amber-300">VIRTUALES</h5>
+                                <h5 class="md:text-4xl text-2xl font-semibold text-yellow-300">VIRTUALES</h5>
                                 <p class="text-lg text-slate-100 md:p-6 p-3">Participa en nuestras clases de trading en
                                     vivo a través de Zoom. Conéctate desde cualquier lugar y obtén instrucción en tiempo
                                     real de nuestros profesionales.</p>
                                 <div class="divider my-0 mx-4"></div>
                                 <div class="flex justify-end">
-                                    <button class="btn btn-warning btn-outline m-3"> Más Información <i
+                                    <button class="btn btn-warning btn-outline m-3"> Ver Clases <i
                                             class="fa-light fa-arrow-right"></i></a></button>
                                 </div>
                             </div>
@@ -193,322 +309,375 @@
             <div class="bg-stone-900 rounded-xl testimonySection">
 
                 <div class="md:px-10 md:pt-8 px-5 pt-5">
-                    <h2 class="text-2xl md:text-3xl font-semibold"><span class="text-amber-300">TESTIMONIOS</span></h2>
+                    <h2 class="text-2xl md:text-4xl font-semibold"><span class="text-amber-400">TESTIMONIOS</span></h2>
                 </div>
 
-                <div
-                    class="flex w-full flex-col lg:flex-row md:p-12 p-6 2xl:p-20 md:gap-10 gap-8 justify-center items-center">
-
-                    <div class="card bg-amber-300 text-primary-content w-96 wow animate__animated animate__fadeInLeft">
-                        <div class="card-body">
-                            <div class="pb-8">
-                                <iframe class="w-full aspect-video rounded-lg"
-                                    src="https://www.youtube.com/embed/Nk2zhR3Xf-Q?si=re3W-1314DtpTpbj"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="p-8">
+                    <div class="swiper md:p-8">
+                        <div class="swiper-wrapper">
+                            <!-- Testimonio 1 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"TRX Academy ha transformado mi enfoque hacia el
+                                        trading. Sus estrategias son claras, efectivas y muy fáciles de seguir.
+                                        ¡Recomiendo encarecidamente sus cursos a todos los aspirantes a traders!"
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Juan Pérez</p>
+                                    <p class="text-sm text-gray-400">Trader Experto</p>
+                                </div>
                             </div>
-                            <h2 class="card-title text-stone-800">TESTIMONIO 1</h2>
-                            <p>Descubre cómo nuestras clases de trading han transformado la experiencia de aprendizaje
-                                de nuestros estudiantes. Lee sus testimonios y conoce de primera mano cómo nuestros
-                                cursos presenciales en Cúcuta y nuestras clases virtuales en vivo a través de Zoom les
-                                han ayudado a alcanzar sus metas financieras y dominar el mercado. Sus historias de
-                                éxito son nuestra mayor satisfacción y motivación.</p>
+                            <!-- Testimonio 2 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"La plataforma de aprendizaje de TRX Academy es muy
+                                        interactiva y educativa. Me ayudó a desarrollar mis habilidades en tiempo récord
+                                        y ya estoy viendo grandes resultados en mis operaciones."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Ana García</p>
+                                    <p class="text-sm text-gray-400">Novata en Trading</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 3 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"Gracias a TRX Academy, he aprendido a identificar
+                                        oportunidades de mercado con mayor precisión. Su soporte al cliente es excelente
+                                        y siempre están dispuestos a ayudar."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Carlos López</p>
+                                    <p class="text-sm text-gray-400">Trader Independiente</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 4 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"La metodología de enseñanza de TRX Academy es
+                                        inigualable. He incrementado mi rentabilidad desde que comencé con ellos y me
+                                        siento mucho más seguro en mis decisiones de trading."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Laura Martínez</p>
+                                    <p class="text-sm text-gray-400">Inversora Part-Time</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 5 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"TRX Academy no solo enseña sobre trading, sino
+                                        también cómo manejar el riesgo y tomar decisiones informadas. Esto me ha ayudado
+                                        a minimizar pérdidas y maximizar ganancias."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">José Ramírez</p>
+                                    <p class="text-sm text-gray-400">Estudiante de Trading</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 6 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"La experiencia con TRX Academy ha sido fantástica.
+                                        La comunidad de traders es muy solidaria y los mentores son increíblemente
+                                        conocedores. He aprendido mucho más de lo que esperaba."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Marta Rodríguez</p>
+                                    <p class="text-sm text-gray-400">Trader en Formación</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 7 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"El contenido de TRX Academy está muy bien
+                                        estructurado y es fácil de seguir. He mejorado significativamente mis
+                                        habilidades de análisis técnico gracias a sus tutoriales detallados."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Pedro Fernández</p>
+                                    <p class="text-sm text-gray-400">Analista de Mercado</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 8 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"Los seminarios web de TRX Academy son una gran
+                                        fuente de conocimiento. Siempre ofrecen información actualizada sobre las
+                                        tendencias del mercado y estrategias avanzadas de trading."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Sofia González</p>
+                                    <p class="text-sm text-gray-400">Trader Senior</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 9 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"Gracias a los cursos de TRX Academy, he
+                                        desarrollado una comprensión profunda de los mercados financieros. Su enfoque
+                                        práctico ha sido fundamental para mi crecimiento como trader."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Ricardo Morales</p>
+                                    <p class="text-sm text-gray-400">Inversionista</p>
+                                </div>
+                            </div>
+                            <!-- Testimonio 10 -->
+                            <div class="swiper-slide">
+                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                    <p class="text-white font-light">"La atención personalizada que ofrece TRX Academy
+                                        es insuperable. Me han ayudado a desarrollar un plan de trading adaptado a mis
+                                        objetivos y tolerancia al riesgo."
+                                    </p>
+                                    <br>
+                                    <p class="text-md font-semibold text-amber-400">Lucia Herrera</p>
+                                    <p class="text-sm text-gray-400">Trader Profesional</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="card bg-amber-300 text-primary-content w-96 wow animate__animated animate__fadeIn">
-                        <div class="card-body">
-                            <div class="pb-8">
-                                <iframe class="w-full aspect-video rounded-lg"
-                                    src="https://www.youtube.com/embed/Nk2zhR3Xf-Q?si=re3W-1314DtpTpbj"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <h2 class="card-title text-stone-800">TESTIMONIO 2</h2>
-                            <p>Descubre cómo nuestras clases de trading han transformado la experiencia de aprendizaje
-                                de nuestros estudiantes. Lee sus testimonios y conoce de primera mano cómo nuestros
-                                cursos presenciales en Cúcuta y nuestras clases virtuales en vivo a través de Zoom les
-                                han ayudado a alcanzar sus metas financieras y dominar el mercado. Sus historias de
-                                éxito son nuestra mayor satisfacción y motivación.</p>
-                        </div>
-                    </div>
-
-                    <div class="card bg-amber-300 text-primary-content w-96 wow animate__animated animate__fadeInRight">
-                        <div class="card-body">
-                            <div class="pb-8">
-                                <iframe class="w-full aspect-video rounded-lg"
-                                    src="https://www.youtube.com/embed/Nk2zhR3Xf-Q?si=re3W-1314DtpTpbj"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <h2 class="card-title text-stone-800">TESTIMONIO 3</h2>
-                            <p>Descubre cómo nuestras clases de trading han transformado la experiencia de aprendizaje
-                                de nuestros estudiantes. Lee sus testimonios y conoce de primera mano cómo nuestros
-                                cursos presenciales en Cúcuta y nuestras clases virtuales en vivo a través de Zoom les
-                                han ayudado a alcanzar sus metas financieras y dominar el mercado. Sus historias de
-                                éxito son nuestra mayor satisfacción y motivación.</p>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
-        </div>
-        <!-- SECTION 5 -->
-        <div class="md:p-5 p-2 wow animate__animated animate__fadeInRight" id="contacto">
-            <div class="bg-stone-900 rounded-xl p-6 md:p-8 contactSection">
+            <!-- SECTION 5 -->
+            <div class="md:p-5 p-2 wow animate__animated animate__fadeInRight" id="contacto">
+                <div class="bg-stone-800 rounded-xl p-6 md:p-8 contactSection">
 
-                <div class="flex w-full flex-col md:flex-row">
+                    <div class="flex w-full flex-col md:flex-row">
 
-                    <div class="card bg-stone-800 rounded-lg grid justify-center md:w-1/3 w-full">
-                        <figure class="p-10">
-                            <i
-                                class="fa-light fa-user-tie fa-3x text-amber-300 border-2 rounded-full border-amber-300 p-12"></i>
-                        </figure>
-                        <div class="">
-                            <div class="flex justify-center">
-                                <h2 class="card-title text-amber-300 text-4xl text-center font-bold">PABLO <br>
-                                    RODRIGUEZ</h2>
-                            </div>
-                            <p class="mt-5 text-slate-100 text-center text-2xl"><a href="https://wa.me/573108838102"><i
-                                        class="fa-brands fa-whatsapp"></i> 57 310 883 8102</a></p>
+                        <div class="md:w-2/5 w-full">
+                            <div class="card bg-stone-800 rounded-lg grid justify-center w-full">
 
-                            <div class="divider w-full my-4"></div>
+                                <i
+                                    class="fa-solid fa-user-tie text-amber-300 text-center text-6xl border-4 border-amber-400 rounded-full m-auto p-12 my-10"></i>
 
-                            <div class="card-actions justify-center mb-6">
-                                <button class="btn btn-warning">INSCRIBETE AHORA</button>
+                                <div class="">
+                                    <div class="flex justify-center">
+                                        <h2 class="card-title text-amber-300 text-4xl text-center font-bold">PABLO <br>
+                                            RODRIGUEZ</h2>
+                                    </div>
+                                    <p class="mt-5 text-slate-100 text-center text-2xl"><a
+                                            href="https://wa.me/573108838102"><i class="fa-brands fa-whatsapp"></i> 57
+                                            310
+                                            883 8102</a></p>
+
+                                    <div class="divider w-full my-4"></div>
+
+                                    <div class="card-actions justify-center mb-6">
+                                        <button class="btn btn-warning btn-lg">INSCRIBETE AHORA</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="divider lg:divider-horizontal"></div>
+
+                        <div class="w-full">
+
+                            <div class="card border-4 border-stone-800 rounded-box p-6">
+
+                                <div class="flex md:justify-start justify-center">
+                                    <h2 class="text-2xl md:text-3xl font-semibold"><span class="text-amber-300">Enviame
+                                            Un Mensaje</span></h2>
+                                </div>
+
+                                <div class="py-6 px-8">
+                                    <div class="w-full">
+
+                                        <label class="form-control w-full">
+                                            <div class="label">
+                                                <span class="label-text">Nombre</span>
+                                            </div>
+                                            <input type="text" placeholder="Escribe aquí"
+                                                class="input input-bordered w-full bg-stone-900" />
+                                        </label>
+                                        <label class="form-control w-full">
+                                            <div class="label">
+                                                <span class="label-text">Asunto</span>
+                                            </div>
+                                            <input type="text" placeholder="Solicitud"
+                                                class="input input-bordered w-full bg-stone-900" />
+                                        </label>
+                                        <label class="form-control w-full">
+                                            <div class="label">
+                                                <span class="label-text">Correo</span>
+                                            </div>
+                                            <input type="text" placeholder="ejemplo@gmail.com"
+                                                class="input input-bordered w-full bg-stone-900" />
+                                        </label>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <label class="form-control">
+                                            <div class="label">
+                                                <span class="label-text">Tu mensaje</span>
+                                            </div>
+                                            <textarea class="textarea textarea-bordered h-32 bg-stone-900"
+                                                placeholder="Estoy interesado en mas detalles"></textarea>
+                                        </label>
+                                    </div>
+
+                                    <div class="mt-6 md:flex justify-end">
+                                        <button class="btn btn-outline btn-warning md:w-1/3 w-full">Enviar Correo <i
+                                                class="fa-light fa-paper-plane"></i></button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="divider lg:divider-horizontal"></div>
-
-                    <div class="card border-4 border-stone-800 rounded-box md:w-2/3 w-full">
-
-                        <div class="flex md:justify-end justify-center">
-                            <h2 class="text-2xl md:text-3xl font-semibold p-4"><span
-                                    class="text-amber-300">CONTACTO</span></h2>
-                        </div>
-
-                        <div class="py-6 px-8">
-                            <div class="md:flex md:gap-5 w-full">
-
-                                <label class="form-control w-full">
-                                    <div class="label">
-                                        <span class="label-text">Nombre</span>
-                                    </div>
-                                    <input type="text" placeholder="Escribe aquí"
-                                        class="input input-bordered w-full bg-stone-800" />
-                                </label>
-                                <label class="form-control w-full">
-                                    <div class="label">
-                                        <span class="label-text">Asunto</span>
-                                    </div>
-                                    <input type="text" placeholder="Solicitud"
-                                        class="input input-bordered w-full bg-stone-800" />
-                                </label>
-                                <label class="form-control w-full">
-                                    <div class="label">
-                                        <span class="label-text">Correo</span>
-                                    </div>
-                                    <input type="text" placeholder="ejemplo@gmail.com"
-                                        class="input input-bordered w-full bg-stone-800" />
-                                </label>
-                            </div>
-
-                            <div class="mt-2">
-                                <label class="form-control">
-                                    <div class="label">
-                                        <span class="label-text">Tu mensaje</span>
-                                    </div>
-                                    <textarea class="textarea textarea-bordered h-32 bg-stone-800"
-                                        placeholder="Estoy interesado en mas detalles"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="mt-6 md:flex justify-end">
-                                <button class="btn btn-outline btn-warning md:w-1/3 w-full">Enviar Correo <i
-                                        class="fa-light fa-paper-plane"></i></button>
-                            </div>
-
-                        </div>
-
-                    </div>
 
                 </div>
+            </div>
+            <!-- SECTION 6 -->
+            <div class="md:p-5 p-2 wow animate__animated animate__fadeInLeft" id="faqs">
+                <div class="bg-stone-900 rounded-xl faqSection">
 
+                    <div class="">
+                        <h2 class="text-2xl md:text-4xl font-semibold px-10 pt-8"><span
+                                class="text-amber-400">FAQs</span>
+                        </h2>
+                    </div>
+
+                    <div class="py-10 px-10">
+
+                        <div class="join join-vertical w-full">
+                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
+                              <input type="radio" name="my-accordion-4" checked="checked" />
+                              <div class="collapse-title text-xl font-medium text-yellow-200">Pregunta 1</div>
+                              <div class="collapse-content">
+                                <p class="text-white text-xl font-light">hello</p>
+                              </div>
+                            </div>
+                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium text-yellow-200">Pregunta 2</div>
+                              <div class="collapse-content">
+                                <p class="text-white text-xl font-light">hello</p>
+                              </div>
+                            </div>
+                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium text-yellow-200">Pregunta 3</div>
+                              <div class="collapse-content">
+                                <p class="text-white text-xl font-light">hello</p>
+                              </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                </div>
 
             </div>
-        </div>
-        <!-- SECTION 6 -->
-        <div class="md:p-5 p-2 wow animate__animated animate__fadeInLeft" id="faqs">
-            <div class="bg-stone-900 rounded-xl faqSection">
 
-                <div class="flex md:justify-start justify-center">
-                    <h2 class="text-2xl md:text-3xl font-semibold px-10 pt-8"><span class="text-amber-300">FAQs</span>
+            <!-- FOOTER -->
+            <div class="md:p-5 p-3">
+                <footer class="footer bg-neutral text-neutral-content items-center p-4 bg-stone-900 rounded-xl">
+                    <aside
+                        class="grid-flow-col items-center md:place-self-center md:justify-self-start justify-self-center">
+                        <a class="btn btn-ghost text-xl" href="#"><span class="text-amber-400 text-xl">TRX</span></a>
+                        <p>Copyright © 2024 - All right reserved</p>
+                    </aside>
+                    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end justify-self-center">
+                        <a href="#" target="_blank">
+                            <img src="./assets/img/ig.png" width="32" height="32" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="./assets/img/fb.png" width="32" height="32" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="./assets/img/tk.png" width="32" height="32" alt="">
+                        </a>
+                    </nav>
+                </footer>
+            </div>
+            <!--  -->
+
+        </div>
+
+        <!-- PROMO FUT -->
+
+        <div class="bg-amber-400 p-3 hidden" id="promo">
+            <div class="flex flex-row justify-between">
+
+                <div class="flex flex-col items-start">
+
+                    <h3 class="text-stone-800 font-regular text-2xl">
+                        <span class="hidden md:inline">Precio De</span> Inscripción
+                    </h3>
+                    <h2 class="flex items-center">
+                        <span class="text-stone-900 md:text-4xl text-2xl me-2 font-bold">$2.000.000</span>
+                        <span class="text-stone-700 text-2xl line-through md:inline hidden">$ 2.500.000</span>
                     </h2>
+
                 </div>
 
-                <div class="py-5 px-10">
+                <div>
+                    <div class="grid auto-cols-max grid-flow-col md:gap-6 gap-2 text-center justify-end">
 
-                    <div class="flex flex-col md:flex-row gap-10">
-
-                        <div class="py-4 md:w-2/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 1</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 1</p>
-                                </div>
-                            </div>
+                        <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
+                            <span class="countdown font-mono md:text-4xl text-xl ">
+                                <span style="--value:15;"></span>
+                            </span>
+                            Días
                         </div>
-
-                        <div class="py-4 md:w-3/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 2</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 2</p>
-                                </div>
-                            </div>
+                        <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
+                            <span class="countdown font-mono md:text-4xl text-xl">
+                                <span style="--value:10;"></span>
+                            </span>
+                            Hora
                         </div>
-
-                    </div>
-
-                    <div class="flex flex-col md:flex-row gap-10">
-
-                        <div class="py-4 md:w-3/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 2</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 2</p>
-                                </div>
-                            </div>
+                        <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
+                            <span class="countdown font-mono md:text-4xl text-xl">
+                                <span style="--value:24;"></span>
+                            </span>
+                            Min
                         </div>
-
-                        <div class="py-4 md:w-2/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 4</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 4</p>
-                                </div>
-                            </div>
+                        <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
+                            <span class="countdown font-mono md:text-4xl text-xl">
+                                <span style="--value:${counter};"></span>
+                            </span>
+                            Sec
                         </div>
-
-                    </div>
-
-                    <div class="flex flex-col md:flex-row gap-10">
-
-                        <div class="py-4 md:w-2/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 5</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 5</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="py-4 md:w-3/5">
-                            <div class="collapse collapse-arrow bg-stone-800">
-                                <input type="radio" name="my-accordion-2" />
-                                <div class="collapse-title text-xl font-medium">PREGUNTA 6</div>
-                                <div class="collapse-content">
-                                    <p>Respuesta 6</p>
-                                </div>
-                            </div>
-                        </div>
-
-
 
                     </div>
                 </div>
-            </div>
 
-        </div>
-
-        <!-- FOOTER -->
-        <div class="md:p-5 p-3">
-            <footer class="footer bg-neutral text-neutral-content items-center p-4 bg-stone-900 rounded-xl">
-                <aside
-                    class="grid-flow-col items-center md:place-self-center md:justify-self-start justify-self-center">
-                    <a class="btn btn-ghost text-xl" href="#"><span class="text-amber-400 text-xl">TRX</span></a>
-                    <p>Copyright © 2024 - All right reserved</p>
-                </aside>
-                <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end justify-self-center">
-                    <a href="#" target="_blank">
-                        <img src="./assets/img/ig.png" width="32" height="32" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="./assets/img/fb.png" width="32" height="32" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="./assets/img/tk.png" width="32" height="32" alt="">
-                    </a>
-                </nav>
-            </footer>
-        </div>
-        <!--  -->
-
-    </div>
-
-    <!-- PROMO FUT -->
-
-    <div class="bg-amber-400 p-3 hidden" id="promo">
-        <div class="flex flex-row justify-between">
-
-            <div class="flex flex-col items-start">
-
-                <h3 class="text-stone-800 font-regular text-2xl">
-                    <span class="hidden md:inline">Precio De</span> Inscripción
-                </h3>
-                <h2 class="flex items-center">
-                    <span class="text-stone-900 md:text-4xl text-2xl me-2 font-bold">$2.000.000</span>
-                    <span class="text-stone-700 text-2xl line-through md:inline hidden">$ 2.500.000</span>
-                </h2>
 
             </div>
-
-            <div>
-                <div class="grid auto-cols-max grid-flow-col md:gap-6 gap-2 text-center justify-end">
-
-                    <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
-                        <span class="countdown font-mono md:text-4xl text-xl ">
-                            <span style="--value:15;"></span>
-                        </span>
-                        Días
-                    </div>
-                    <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
-                        <span class="countdown font-mono md:text-4xl text-xl">
-                            <span style="--value:10;"></span>
-                        </span>
-                        Hora
-                    </div>
-                    <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
-                        <span class="countdown font-mono md:text-4xl text-xl">
-                            <span style="--value:24;"></span>
-                        </span>
-                        Min
-                    </div>
-                    <div class="bg-amber-300 rounded-md text-stone-700 flex flex-col p-2">
-                        <span class="countdown font-mono md:text-4xl text-xl">
-                            <span style="--value:${counter};"></span>
-                        </span>
-                        Sec
-                    </div>
-
-                </div>
-            </div>
-
-
         </div>
-    </div>
 
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+        </script>
 
 </body>
 
