@@ -16,14 +16,23 @@
 }
 
 body {
-    font-family: 'Montserrat', 'Open Sans',sans-serif !important;
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;
 }
 
-.heroSection{
+html,
+body,
+:root {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+.heroSection {
     background: url('./assets/img/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 82vh;
 }
 
 /* .contentSection{
@@ -58,7 +67,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .contactSection{
+    .contactSection {
         background: #1C191A;
     }
 }

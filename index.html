@@ -4,37 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Aprende trading con TRX Academy. Ofrecemos tutorías personalizadas, asesoramiento experto y copy trading para que operes con confianza en los mercados financieros. ¡Únete ahora!">
+    <meta name="keywords"
+        content="trading, tutorías de trading, asesoramiento trading, copy trading, inversiones, forex, criptomonedas, acciones, TRX Academy">
+    <meta name="author" content="TRX Academy">
+    <meta property="og:title" content="TRX Academy - Aprende Trading con Expertos">
+    <meta property="og:description"
+        content="Domina los mercados financieros con TRX Academy. Accede a tutorías personalizadas, asesoramiento profesional y copy trading. ¡Empieza a operar con éxito!">
+    <meta property="og:image" content="./assets/img/trx-academy.webp">
+    <meta property="og:url" content="https://trxacademy.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TRX Academy - Formación y Asesoramiento en Trading">
+    <meta name="twitter:description"
+        content="Mejora tus habilidades de trading con TRX Academy. Tutorías personalizadas, asesoramiento y copy trading para que operes con confianza. ¡Únete hoy!">
+    <meta name="twitter:image" content="./assets/img/hero.webp">
+
+
     <title>TRX | ACADEMY</title>
+    <link rel="icon" href="./assets/img/trxLogo.webp" type="image/x-icon" />
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+    </noscript>
 
     <link rel="stylesheet" href="./main.css" rel="stylesheet" type="text/css" />
     <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="./assets/css/full.min.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/main.css" rel="stylesheet" type="text/css" />
     <script src="./assets/js/tailwind.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/wow.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    height: {
+                        'full': '100vh',
+                        '1/4': '60vh',
+                        '1/2': '50vh',
+                    },
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+        });
+    </script>
 
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new WOW().init();
-        });
-    </script>
 
     <style>
         html {
             scroll-behavior: smooth;
-        }
-    </style>
-
-    <style>
-        /* Ocultar animaciones en móviles */
-        @media (max-width: 768px) {
-            .wow {
-                visibility: visible !important;
-                animation: none !important;
-            }
         }
     </style>
 
@@ -44,611 +68,553 @@
             height: 100%;
         }
     </style>
-
-    <script>
-        // Inicializar Wow.js solo en vista de escritorio
-        if (window.innerWidth > 768) {
-            new WOW().init();
-        }
-    </script>
-
 </head>
 
 <body class="bg-stone-950">
     <div id="root">
 
         <!-- NAVBAR -->
-        <div class="md:p-5 p-2">
-            <div class="navbar bg-stone-900 rounded-xl">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a href="#contenido">Contenido</a></li>
-                            <li><a href="#modalidad">Modalidad</a></li>
-                            <li><a href="#testimonios">Testimonios</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
-                            <li><a href="#faqs">FAQs</a></li>
-                        </ul>
+        <div class="navbar bg-stone-800/50">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
                     </div>
-                    <a class="btn btn-ghost text-xl" href="#"><span class="text-amber-400">TRX</span></a>
-                </div>
-                <div class="navbar-end hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a href="#contenido">Contenido</a></li>
-                        <li><a href="#modalidad">Modalidad</a></li>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catalogo</a></li>
+                        <li><a href="#tienda">Tienda</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                         <li><a href="#faqs">FAQs</a></li>
                     </ul>
                 </div>
+                <img src="./assets/img/trxLogo.webp" class="rounded-lg" width="48" height="48" alt="Logo TRX ACADEMY">
+            </div>
+            <div class="navbar-end hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 gap-2">
+                    <li><a href="#inicio">Inicio</a>
+                    </li>
+                    <li><a href="#catalogo">Catalogo</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
             </div>
         </div>
         <!-- SECTION 1 -->
-        <div class="md:p-5 p-2 wow animate__animated animate__fadeInLeft" id="hero">
-            <div class="bg-stone-900 rounded-xl heroSection p-6 md:p-20">
 
-                <div class="mb-3">
-                    <h1 class="text-gray-100 text-5xl md:text-6xl font-bold"><span class="text-amber-400">TRX</span>
-                        <span class="text-white">| ACADEMY</span>
+        <section id="inicio" class="heroSection flex flex-col justify-center">
+            <div class="p-6 md:p-20 ">
+                <div class="flex items-center">
+                    <h1 class="text-gray-100 text-5xl md:text-6xl font-black"><span class="text-amber-400">TRX</span>
+                        <span class="text-white font-light">|</span>
+                        ACADEMY
                     </h1>
                 </div>
 
-                <div class="mb-3">
-                    <h2 class="text-gray-100 text-2xl md:text-3xl font-semibold hidden md:inline"><span
-                            class="text-yellow-200">APRENDE
-                            TRADING / OBTÉN CAPITAL DE FONDEO</span></h2>
+                <div class="my-4">
+                    <h2 class="text-2xl md:text-3xl font-bold "><span class="text-amber-400">APRENDE
+                            TRADING CON LOS MEJORES</span></h2>
                 </div>
 
-                <div>
-                    <h3 class="text-gray-100 md:text-xl text-lg font-regular py-2"><span class="text-slate-100">Domina
-                            el
-                            Trading en Índices Sintéticos y Forex con nuestro curso intensivo. <br> Aprende estrategias
-                            efectivas, análisis técnico, fundamental e institucional. <br> Prepárate para operar con
-                            confianza y <br> únete a nuestras clases en vivo.</span></h3>
+                <div class="md:w-3/5 w-full mb-4">
+                    <h3 class="text-gray-100 md:text-xl text-lg font-regular py-2">
+                        Domina el
+                        Trading en Índices Sintéticos y Forex con nuestro curso intensivo. Aprende estrategias
+                        efectivas, análisis técnico, fundamental e institucional. Prepárate para operar con
+                        confianza y únete a nuestras clases en vivo.</h3>
                 </div>
 
                 <div class="mt-5 flex flex-col md:flex-row gap-5">
-                    <a href="https://wa.me/573108838102" class="btn btn-warning btn-lg w-full md:w-auto ">Inscribete ahora <i
-                            class="fa-light fa-pen-to-square"></i></a>
+                    <a href="https://wa.me/573108838102" class="btn btn-warning btn-lg w-full md:w-auto ">INSCRIBETE
+                        AHORA <i class="fa-light fa-pen-to-square"></i></a>
 
                     <a href="#faqs" class="btn btn-outline btn-warning btn-lg w-full md:w-auto">
-                        Más Información <i class="fa-light fa-arrow-right"></i></a>
+                        SABER MÁS <i class="fa-light fa-arrow-right"></i></a>
                 </div>
+
+
             </div>
-        </div>
+        </section>
 
         <!-- SECTION 2 -->
-        <div class="md:p-5 p-2 wow animate__animated animate__fadeInRight" id="contenido">
-            <div class="bg-stone-900 rounded-xl contentSection p-4 md:p-12">
+        <section id="catalogo" class="">
+            <div class="bg-stone-900">
+                <div class="flex w-full flex-col md:flex-row md:p-12 p-6 2xl:p-20">
 
-                <div class="md:py-0 md:px-0 py-2 px-2">
-                    <h2 class="text-2xl md:text-4xl font-semibold"><span class="text-amber-400">PROGRAMA DE
-                            FORMACIÓN</span></h2>
-                </div>
+                    <div class="grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
+                        <div class="p-20">
+                            <h4 class="md:text-4xl text-2xl text-amber-400 font-bold">INTRODUCCIÓN AL TRADING</h4>
+                            <h5 class="md:text-xl text-md text-slate-100 font-regular my-4">Si estás dando tus
+                                primeros pasos en el trading, esta introducción te guiará para alcanzar tus metas.
+                            </h5>
 
-                <div class="flex flex-col md:flex-row justify-between">
+                            <div class="flex justify-end">
+                                <button class="btn btn-outline btn-warning">Ver contenido<i
+                                        class="fa-light fa-arrow-right"></i></button>
+                            </div>
 
-
-                    <div class="md:p-10 p-6 md:pb-0">
-                        <ol class="relative border-s border-gray-200 dark:border-gray-700">
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Curso de Trading de Índices Sintéticos
-                                </h3>
-                            </li>
-
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Curso de Trading de Forex
-                                </h3>
-                            </li>
-
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Fundamentos Principales del Trading
-                                </h3>
-                            </li>
-
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Análisis Técnico, Fundamental e Institucional
-                                </h3>
-                            </li>
-
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Cómo Operar Correctamente Los Mercados
-                                </h3>
-                            </li>
-
-                            <li class="mb-10 ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Psicotrading Y La Mentalidad Al Operar
-                                </h3>
-                            </li>
-
-                            <li class="ms-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600">
-                                    <i class="text-white fa-regular fa-check"></i>
-                                </span>
-                                <h3
-                                    class="flex items-center mb-1 md:text-xl text-lg  font-semibold text-gray-900 dark:text-white hover:text-amber-300 cursor-pointer">
-                                    Estrategias Probadas Para Los índices
-                                </h3>
-                            </li>
-                        </ol>
+                        </div>
                     </div>
 
-                    <div class="md:text-end text-center md:py-0 py-4 wow animate__animated animate__fadeInDown">
+                    <div class="divider lg:divider-horizontal 2xl:px-20"></div>
 
-                        <div class="mockup-phone">
-                            <div class="camera"></div>
-                            <div class="display">
-                                <div class="artboard artboard-demo phone-1">
+                    <div class="grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
+                        <div class="p-20">
+                            <h4 class="md:text-4xl text-2xl text-amber-400 font-bold">MODULOS<br> GRATIS</h4>
+                            <h5 class="md:text-xl text-md text-slate-100 font-regular my-4">Prepárate y aprende sin
+                                costo las bases necesarias para avanzar con firmeza y confianza en el
+                                trading.
+                            </h5>
 
-
-                                    <div class="chat chat-start px-6 mb-4">
-                                        <div class="chat-bubble text-start p-5">
-                                            <h3>
-                                                ¿Que obtengo al finalizar el programa?</span>
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="chat chat-end px-6">
-                                        <div class="chat-bubble chat-bubble-warning text-start p-5">
-                                            <h3>
-                                                ¡¡Tendrás la oportunidad de acceder a <br> <span class="font-bold">10K
-                                                    de
-                                                    capital de fondeo a través de <br>
-                                                    Top Ten Funding</span>!!
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                </div>
+                            <div class="flex justify-end">
+                                <button class="btn btn-outline btn-warning">Ver contenido<i
+                                        class="fa-light fa-arrow-right"></i></button>
                             </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex w-full flex-col md:gap-12 gap-4 md:flex-row md:p-12 p-6 2xl:p-20">
+
+                <div
+                    class="bg-stone-800 rounded-lg flex justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
+                    <div class="p-14">
+                        <h4 class="md:text-3xl text-xl text-amber-400 font-bold">CURSO FOREX</h4>
+                        <h5 class="md:text-lg text-sm text-slate-100 font-regular my-4">Domina el mercado de divisas y
+                            opera con confianza. Aprende análisis técnico, estrategias rentables y gestión del riesgo
+                            para alcanzar tus metas financieras. ¡Inscríbete ahora!
+                        </h5>
+
+                        <div class="flex justify-between items-center">
+                            <div class="rating gap-1">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" " />
+                                <input type=" radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300"
+                                    checked="checked" />
+                            </div>
+                            <button class=" btn btn-warning font-bold">Comprar 15$</button>
                         </div>
 
+                    </div>
+                </div>
+
+                <div
+                    class="bg-stone-800 rounded-lg flex justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
+                    <div class="p-14">
+                        <h4 class="md:text-3xl text-xl text-amber-400 font-bold">CURSO ÍNDICES SINTÉTICOS</h4>
+                        <h5 class="md:text-lg text-sm text-slate-100 font-regular my-4">Sumérgete en el mundo del
+                            trading de alta velocidad. Descubre cómo operar índices sintéticos y aprovecha su
+                            volatilidad para generar ganancias. ¡Aprende y opera!
+                            trading.
+                        </h5>
+
+                        <div class="flex justify-between items-center">
+                            <div class="rating gap-1">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" " />
+                                <input type=" radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300"
+                                    checked="checked" />
+                            </div>
+                            <button class=" btn btn-warning font-bold">Comprar 20$</button>
+                        </div>
 
                     </div>
-
                 </div>
 
             </div>
-        </div>
+        </section>
         <!-- SECTION 3 -->
-        <div class="md:p-5 p-2" id="modalidad">
-            <div class="bg-stone-800 rounded-xl ">
-                <div>
+        <section id="tienda">
+            <div class="bg-stone-900 md:p-12 p-6 2xl:p-20 flex">
 
-                    <div class="flex w-full flex-col lg:flex-row md:p-12 p-6 2xl:p-20">
+                <div class="md:w-3/4 w-full">
+                    <div class="mb-6">
+                        <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">TIENDA</h5>
+                        <p class="md:text-lg text-md text-slate-100 font-light">Descubre multiples recursos y
+                            herramientas
+                            que
+                            te
+                            serviran de apoyo en tu
+                            camino como Trader.</p>
+                    </div>
 
-                        <div
-                            class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
-                            <div class="text-center">
-                                <h4 class="md:text-6xl text-4xl text-yellow-100 p-16"><i
-                                        class="fa-solid fa-users fa-xl"></i></h4>
-                                <h5 class="md:text-4xl text-2xl font-semibold text-yellow-300">PRESENCIALES</h5>
-                                <p class="text-lg text-slate-100 md:p-6 p-3">Ofrecemos clases de trading presenciales en
-                                    Cúcuta, Norte de Santander. Aprende estrategias de mercado y análisis financiero en
-                                    un entorno interactivo.</p>
-                                <div class="divider my-0 mx-4"></div>
-                                <!-- <div class="flex justify-end">
-                                    <button class="btn btn-warning btn-outline m-3"> Ver Dirección <i
-                                            class="fa-light fa-arrow-right"></i></a></button>
-                                </div> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                        <div class="flex flex-row bg-stone-800 shadow-xl rounded-lg">
+                            <figure class="flex justify-center items-center p-10">
+                                <i class="iconify text-6xl text-red-500" data-icon="dashicons:pdf"></i></a>
+                            </figure>
+                            <div class="py-5 pe-5 flex flex-col flex-grow">
+                                <h2 class="md:text-lg font-bold text-slate-200">Indicadores de velas</h2>
+                                <p class="text-slate-400">Aprende más sobre los patrones y como leerlos.</p>
+                                <div class="flex justify-end mt-4">
+                                    <button class="btn btn-outline btn-warning">Obtener <i class="iconify"
+                                            data-icon="mdi:cart-outline"></i></a></button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="divider lg:divider-horizontal 2xl:px-20">Ó</div>
-
-                        <div
-                            class="card bg-stone-800 rounded-lg grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInDown">
-                            <div class="text-center">
-                                <h4 class="md:text-6xl text-4xl text-yellow-100 p-16"><i
-                                        class="fa-solid fa-laptop-mobile fa-xl"></i></h4>
-                                <h5 class="md:text-4xl text-2xl font-semibold text-yellow-300">VIRTUALES</h5>
-                                <p class="text-lg text-slate-100 md:p-6 p-3">Participa en nuestras clases de trading en
-                                    vivo a través de Zoom. Conéctate desde cualquier lugar y obtén instrucción en tiempo
-                                    real de nuestros profesionales.</p>
-                                <div class="divider my-0 mx-4"></div>
-                                <!-- <div class="flex justify-end">
-                                    <button class="btn btn-warning btn-outline m-3"> Ver Clases <i
-                                            class="fa-light fa-arrow-right"></i></a></button>
-                                </div> -->
+                        <div class="flex flex-row bg-stone-800 shadow-xl rounded-lg">
+                            <figure class="flex justify-center items-center p-10">
+                                <i class="iconify text-6xl text-blue-500" data-icon="dashicons:reddit"></i></a>
+                            </figure>
+                            <div class="py-5 pe-5 flex flex-col flex-grow">
+                                <h2 class="md:text-lg font-bold text-slate-200">BOT de Telegram</h2>
+                                <p class="text-slate-400">Recibe alertas de señales directamente a tu Telegram.</p>
+                                <div class="flex justify-end mt-4">
+                                    <button class="btn btn-outline btn-warning">Obtener <i class="iconify"
+                                            data-icon="mdi:cart-outline"></i></a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row bg-stone-800 shadow-xl rounded-lg">
+                            <figure class="flex justify-center items-center p-10">
+                                <i class="iconify text-6xl text-amber-500" data-icon="dashicons:format-video"></i></a>
+                            </figure>
+                            <div class="py-5 pe-5 flex flex-col flex-grow">
+                                <h2 class="md:text-lg font-bold text-slate-200">Uso de herramientas.</h2>
+                                <p class="text-slate-400">Aprende a operar con herramientas en tus graficos.</p>
+                                <div class="flex justify-end mt-4">
+                                    <button class="btn btn-outline btn-warning">Obtener <i class="iconify"
+                                            data-icon="mdi:cart-outline"></i></a></button>
+                                </div>
                             </div>
                         </div>
 
                     </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- SECTION 4 -->
-        <div class="md:p-5 p-2" id="testimonios">
-            <div class="bg-stone-900 rounded-xl testimonySection">
-
-                <div class="md:px-10 md:pt-8 px-5 pt-5">
-                    <h2 class="text-2xl md:text-4xl font-semibold"><span class="text-amber-400">TESTIMONIOS</span></h2>
                 </div>
 
-                <div class="p-8">
-                    <div class="swiper md:p-8">
-                        <div class="swiper-wrapper">
-                            <!-- Testimonio 1 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"TRX Academy ha transformado mi enfoque hacia el
-                                        trading. Sus estrategias son claras, efectivas y muy fáciles de seguir.
-                                        ¡Recomiendo encarecidamente sus cursos a todos los aspirantes a traders!"
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Juan Pérez</p>
-                                    <p class="text-sm text-gray-400">Trader Experto</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 2 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"La plataforma de aprendizaje de TRX Academy es muy
-                                        interactiva y educativa. Me ayudó a desarrollar mis habilidades en tiempo récord
-                                        y ya estoy viendo grandes resultados en mis operaciones."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Ana García</p>
-                                    <p class="text-sm text-gray-400">Novata en Trading</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 3 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"Gracias a TRX Academy, he aprendido a identificar
-                                        oportunidades de mercado con mayor precisión. Su soporte al cliente es excelente
-                                        y siempre están dispuestos a ayudar."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Carlos López</p>
-                                    <p class="text-sm text-gray-400">Trader Independiente</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 4 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"La metodología de enseñanza de TRX Academy es
-                                        inigualable. He incrementado mi rentabilidad desde que comencé con ellos y me
-                                        siento mucho más seguro en mis decisiones de trading."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Laura Martínez</p>
-                                    <p class="text-sm text-gray-400">Inversora Part-Time</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 5 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"TRX Academy no solo enseña sobre trading, sino
-                                        también cómo manejar el riesgo y tomar decisiones informadas. Esto me ha ayudado
-                                        a minimizar pérdidas y maximizar ganancias."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">José Ramírez</p>
-                                    <p class="text-sm text-gray-400">Estudiante de Trading</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 6 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"La experiencia con TRX Academy ha sido fantástica.
-                                        La comunidad de traders es muy solidaria y los mentores son increíblemente
-                                        conocedores. He aprendido mucho más de lo que esperaba."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Marta Rodríguez</p>
-                                    <p class="text-sm text-gray-400">Trader en Formación</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 7 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"El contenido de TRX Academy está muy bien
-                                        estructurado y es fácil de seguir. He mejorado significativamente mis
-                                        habilidades de análisis técnico gracias a sus tutoriales detallados."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Pedro Fernández</p>
-                                    <p class="text-sm text-gray-400">Analista de Mercado</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 8 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"Los seminarios web de TRX Academy son una gran
-                                        fuente de conocimiento. Siempre ofrecen información actualizada sobre las
-                                        tendencias del mercado y estrategias avanzadas de trading."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Sofia González</p>
-                                    <p class="text-sm text-gray-400">Trader Senior</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 9 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"Gracias a los cursos de TRX Academy, he
-                                        desarrollado una comprensión profunda de los mercados financieros. Su enfoque
-                                        práctico ha sido fundamental para mi crecimiento como trader."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Ricardo Morales</p>
-                                    <p class="text-sm text-gray-400">Inversionista</p>
-                                </div>
-                            </div>
-                            <!-- Testimonio 10 -->
-                            <div class="swiper-slide">
-                                <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
-                                    <p class="text-white font-light">"La atención personalizada que ofrece TRX Academy
-                                        es insuperable. Me han ayudado a desarrollar un plan de trading adaptado a mis
-                                        objetivos y tolerancia al riesgo."
-                                    </p>
-                                    <br>
-                                    <p class="text-md font-semibold text-amber-400">Lucia Herrera</p>
-                                    <p class="text-sm text-gray-400">Trader Profesional</p>
-                                </div>
-                            </div>
+                <div class="divider lg:divider-horizontal 2xl:px-20"></div>
+
+                <div class="md:w-1/4 w-full">
+                    <div class="mb-4">
+                        <p class="mb-1 text-slate-200">Buscar</p>
+                        <label class="input input-bordered bg-stone-700 text-slate-100 flex items-center gap-2">
+                            <input type="text" class="grow " placeholder="¿Que te interesa?" />
+                            <i class="iconify" data-icon="tabler:search"></i></a>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <select class="select select-bordered bg-stone-700 text-slate-100 w-full max-w-xs">
+                            <option disabled selected>Categoria</option>
+                            <option>PDF</option>
+                            <option>BOT</option>
+                            <option>VIDEO</option>
+                        </select>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text me-2">Gratis</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-amber-500"
+                                    checked="checked" />
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text me-2">Pago</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-amber-500"
+                                    checked="checked" />
+                            </label>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <!-- SECTION 5 -->
-            <div class="md:p-5 p-2 wow animate__animated animate__fadeInRight" id="contacto">
-                <div class="bg-stone-800 rounded-xl p-6 md:p-8 contactSection">
+        </section>
 
-                    <div class="flex w-full flex-col md:flex-row">
+        <section id="testimonios">
+            <div class="md:p-12 p-6 2xl:p-20">
+                <div class="mb-6">
+                    <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">TESTIMONIOS</h5>
+                    <p class="md:text-lg text-md text-slate-100 font-light">Conoce los casos de exito y como los Traders
+                        han alcanzado sus metas con nuestras asesorias.</p>
+                </div>
 
-                        <div class="md:w-2/5 w-full">
-                            <div class="card bg-stone-800 rounded-lg grid justify-center w-full">
-
-                                <i
-                                    class="fa-solid fa-user-tie text-amber-300 text-center text-6xl border-4 border-amber-400 rounded-full m-auto p-12 my-10"></i>
-
-                                <div class="">
-                                    <div class="flex justify-center">
-                                        <h2 class="card-title text-amber-300 text-4xl text-center font-bold">PABLO <br>
-                                            RODRIGUEZ</h2>
-                                    </div>
-                                    <p class="mt-5 text-slate-100 text-center text-2xl"><a
-                                            href="https://wa.me/573108838102"><i class="fa-brands fa-whatsapp"></i> 57
-                                            310
-                                            883 8102</a></p>
-
-                                    <div class="divider w-full my-4"></div>
-
-                                    <div class="card-actions justify-center mb-6">
-                                        <a href="https://wa.me/573108838102" class="btn btn-warning btn-lg">INSCRIBETE AHORA</a>
-                                    </div>
-                                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonio 1 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"TRX Academy ha transformado mi enfoque hacia el
+                                    trading. Sus estrategias son claras, efectivas y muy fáciles de seguir.
+                                    ¡Recomiendo encarecidamente sus cursos a todos los aspirantes a traders!"
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Juan Pérez</p>
+                                <p class="text-sm text-gray-400">Trader Experto</p>
                             </div>
                         </div>
+                        <!-- Testimonio 2 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"La plataforma de aprendizaje de TRX Academy es muy
+                                    interactiva y educativa. Me ayudó a desarrollar mis habilidades en tiempo récord
+                                    y ya estoy viendo grandes resultados en mis operaciones."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Ana García</p>
+                                <p class="text-sm text-gray-400">Novata en Trading</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 3 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"Gracias a TRX Academy, he aprendido a identificar
+                                    oportunidades de mercado con mayor precisión. Su soporte al cliente es excelente
+                                    y siempre están dispuestos a ayudar."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Carlos López</p>
+                                <p class="text-sm text-gray-400">Trader Independiente</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 4 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"La metodología de enseñanza de TRX Academy es
+                                    inigualable. He incrementado mi rentabilidad desde que comencé con ellos y me
+                                    siento mucho más seguro en mis decisiones de trading."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Laura Martínez</p>
+                                <p class="text-sm text-gray-400">Inversora Part-Time</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 5 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"TRX Academy no solo enseña sobre trading, sino
+                                    también cómo manejar el riesgo y tomar decisiones informadas. Esto me ha ayudado
+                                    a minimizar pérdidas y maximizar ganancias."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">José Ramírez</p>
+                                <p class="text-sm text-gray-400">Estudiante de Trading</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 6 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"La experiencia con TRX Academy ha sido fantástica.
+                                    La comunidad de traders es muy solidaria y los mentores son increíblemente
+                                    conocedores. He aprendido mucho más de lo que esperaba."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Marta Rodríguez</p>
+                                <p class="text-sm text-gray-400">Trader en Formación</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 7 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"El contenido de TRX Academy está muy bien
+                                    estructurado y es fácil de seguir. He mejorado significativamente mis
+                                    habilidades de análisis técnico gracias a sus tutoriales detallados."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Pedro Fernández</p>
+                                <p class="text-sm text-gray-400">Analista de Mercado</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 8 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"Los seminarios web de TRX Academy son una gran
+                                    fuente de conocimiento. Siempre ofrecen información actualizada sobre las
+                                    tendencias del mercado y estrategias avanzadas de trading."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Sofia González</p>
+                                <p class="text-sm text-gray-400">Trader Senior</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 9 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"Gracias a los cursos de TRX Academy, he
+                                    desarrollado una comprensión profunda de los mercados financieros. Su enfoque
+                                    práctico ha sido fundamental para mi crecimiento como trader."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Ricardo Morales</p>
+                                <p class="text-sm text-gray-400">Inversionista</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 10 -->
+                        <div class="swiper-slide">
+                            <div class="max-w p-8 bg-stone-800 rounded-lg md:shadow-md">
+                                <p class="text-white font-light">"La atención personalizada que ofrece TRX Academy
+                                    es insuperable. Me han ayudado a desarrollar un plan de trading adaptado a mis
+                                    objetivos y tolerancia al riesgo."
+                                </p>
+                                <br>
+                                <p class="text-md font-semibold text-amber-400">Lucia Herrera</p>
+                                <p class="text-sm text-gray-400">Trader Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="divider lg:divider-horizontal"></div>
+        <section id="contacto">
+            <div class="bg-stone-900 md:p-12 p-6 2xl:p-20">
+                <div class="mb-6">
+                    <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">CONTACTO</h5>
+                    <p class="md:text-lg text-md text-slate-100 font-light">Aclara tus dudas y conoce a detalle todo lo
+                        que tenemos que ofrecerte.</p>
+                </div>
 
+                <div class="w-full flex gap-10">
+                    <div
+                        class="md:w-1/4 bg-stone-800 flex flex-col flex-grow rounded-lg justify-center items-center gap-5 p-10">
+                        <h5 class="md:text-4xl text-2xl text-amber-500 font-black text-center">MIGUEL ROMANO</h5>
+                        <button class="w-full btn btn-primary font-bold text-white flex items-center">
+                            CONTÁCTAME AHORA
+                            <i class="iconify" data-icon="file-icons:telegram"></i>
+                        </button>
+                    </div>
+                    <div class="md:w-3/4 bg-stone-800 flex flex-col rounded-lg justify-center items-center gap-5 p-10">
                         <div class="w-full">
+                            <div class="flex md:justify-start justify-center mb-4">
+                                <h2 class="text-xl md:text-2xl font-semibold"><span class="text-amber-500">Escribeme un
+                                        correo</span></h2>
+                            </div>
 
-                            <div class="card border-4 border-stone-800 rounded-box p-6">
+                            <form action="mailto:pablohetfield@gmail.com" method="post" enctype="text/plain">
 
-                                <div class="flex md:justify-start justify-center">
-                                    <h2 class="text-2xl md:text-3xl font-semibold"><span class="text-amber-300">Enviame
-                                            Un Mensaje</span></h2>
-                                </div>
-
-                                <form action="mailto:pablohetfield@gmail.com" method="post" enctype="text/plain">
-
-                                    <div class="py-6 px-8">
-                                        <div class="w-full">
-
-                                            <label class="form-control w-full">
-                                                <div class="label">
-                                                    <span class="label-text">Nombre</span>
-                                                </div>
-                                                <input type="text" placeholder="Escribe aquí"
-                                                    class="input input-bordered w-full bg-stone-900" name="nombre" />
-                                            </label>
-                                            <label class="form-control w-full">
-                                                <div class="label">
-                                                    <span class="label-text">Asunto</span>
-                                                </div>
-                                                <input type="text" placeholder="Solicitud"
-                                                    class="input input-bordered w-full bg-stone-900" name="asunto" />
-                                            </label>
-                                            <label class="form-control w-full">
-                                                <div class="label">
-                                                    <span class="label-text">Correo</span>
-                                                </div>
-                                                <input type="text" placeholder="ejemplo@gmail.com"
-                                                    class="input input-bordered w-full bg-stone-900" name="email" />
-                                            </label>
-                                        </div>
-
-                                        <div class="mt-2">
-                                            <label class="form-control">
-                                                <div class="label">
-                                                    <span class="label-text">Tu mensaje</span>
-                                                </div>
-                                                <textarea class="textarea textarea-bordered h-32 bg-stone-900"
-                                                    placeholder="Estoy interesado en mas detalles"
-                                                    name="mensaje"></textarea>
-                                            </label>
-                                        </div>
-
-                                        <div class="mt-6 md:flex justify-end">
-                                            <button type="submit"
-                                                class="btn btn-outline btn-warning md:w-1/3 w-full">Enviar Correo <i
-                                                    class="fa-light fa-paper-plane"></i></button>
-                                        </div>
-
+                                <div class="w-full">
+                                    <div class="form-group flex gap-5">
+                                        <label class="form-control text-sm w-full">
+                                            <div class="label">
+                                                <span class="label-text">Nombre</span>
+                                            </div>
+                                            <input type="text" placeholder="Escribe aquí"
+                                                class="input input-bordered w-full bg-stone-900" name="nombre" />
+                                        </label>
+                                        <label class="form-control text-sm w-full">
+                                            <div class="label">
+                                                <span class="label-text">Correo</span>
+                                            </div>
+                                            <input type="text" placeholder="ejemplo@gmail.com"
+                                                class="input input-bordered w-full bg-stone-900" name="email" />
+                                        </label>
                                     </div>
+                                    <label class="form-control text-sm w-full">
+                                        <div class="label">
+                                            <span class="label-text">Asunto</span>
+                                        </div>
+                                        <input type="text" placeholder="Solicitud"
+                                            class="input input-bordered w-full bg-stone-900" name="asunto" />
+                                    </label>
 
-                                </form>
+                                </div>
 
-                            </div>
+                                <div class="mt-2">
+                                    <label class="form-control text-sm">
+                                        <div class="label">
+                                            <span class="label-text">Tu mensaje</span>
+                                        </div>
+                                        <textarea class="textarea textarea-bordered h-24 bg-stone-900"
+                                            placeholder="Estoy interesado en mas detalles" name="mensaje"></textarea>
+                                    </label>
+                                </div>
+
+                                <div class="mt-6 md:flex justify-end">
+                                    <button type="submit" class="btn btn-outline btn-warning md:w-1/3 w-full">ENVIAR
+                                        CORREO <i class="iconify" data-icon="lucide:mail"></i></button>
+                                </div>
+
+                            </form>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="faqs">
+            <div class="md:p-12 p-6 2xl:p-20">
+                <div class="mb-6">
+                    <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">FAQ's</h5>
+                    <p class="md:text-lg text-md text-slate-100 font-light">¿Aún no estas seguro? Encuentra la respuesta
+                        que buscas en las preguntas frecuentes de los Traders.</p>
+                </div>
+                <div class="grid md:grid-cols-4 grid-cols-1 gap-5">
+                    <div tabindex="0" class="collapse bg-stone-800 w-full">
+                        <div class="collapse-title text-xl text-amber-400 font-semibold text-center p-0 p-4">¿Como
+                            funciona TRX
+                            ACADEMY?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-white text-md p-5">Al unirte a cualquiera de nuestros servicios,
+                                tendrás acceso inmediato a una
+                                amplia gama de beneficios diseñados para potenciar tu formación y crecimiento en
+                                el trading: <br><br>
+
+                                Cursos especializados: Aprende de los mejores con programas diseñados para
+                                todos
+                                los niveles.</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse bg-stone-800 w-full">
+                        <div class="collapse-title text-xl text-amber-400 font-semibold text-center p-0 p-4">¿Se paga
+                            una mensualidad?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-white text-md p-5">¡No! En TRX Academy no tendrás que
+                                preocuparte por cuotas mensuales. Todos nuestros servicios están disponibles por
+                                un único pago, lo que te brinda acceso completo sin tarifas recurrentes.</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse bg-stone-800 w-full">
+                        <div class="collapse-title text-xl text-amber-400 font-semibold text-center p-0 p-4">¿Somos una
+                            academia
+                            multinivel?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-white text-md p-5">No, no somos una academia multinivel.
+                                Nuestro enfoque es 100% en tu formación y éxito en el Trading </p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="collapse bg-stone-800 w-full">
+                        <div class="collapse-title text-xl text-amber-400 font-semibold text-center p-0 p-4">¿A donde me
+                            dirijo por
+                            más información?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-white text-md p-5">En nuestra sección contacto puedes
+                                escribirnos por Telegram o correo para recibir un asesoramiento persoalizado</p>
+                        </div>
                     </div>
 
 
                 </div>
             </div>
-            <!-- SECTION 6 -->
-            <div class="md:p-5 p-2 wow animate__animated animate__fadeInLeft" id="faqs">
-                <div class="bg-stone-900 rounded-xl faqSection">
+        </section>
 
-                    <div class="">
-                        <h2 class="text-2xl md:text-4xl font-semibold px-10 pt-8"><span
-                                class="text-amber-400">FAQs</span>
-                        </h2>
-                    </div>
-
-                    <div class="py-10 px-10">
-
-                        <div class="join join-vertical w-full">
-                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
-                                <input type="radio" name="my-accordion-4" checked="checked" />
-                                <div class="collapse-title text-xl font-medium text-yellow-200">¿Cómo funciona TRX
-                                    Academy?</div>
-                                <div class="collapse-content">
-                                    <p class="text-white text-xl font-light p-5">
-                                        Al unirte a cualquiera de nuestros servicios, tendrás acceso inmediato a una
-                                        amplia gama de beneficios diseñados para potenciar tu formación y crecimiento en
-                                        el trading: <br><br>
-
-                                        🟡 Cursos especializados: Aprende de los mejores con programas diseñados para
-                                        todos
-                                        los niveles.
-
-                                        <br><br>
-
-                                        🟡 Pruebas de fondeo: Demuestra tus habilidades y obtén financiamiento para
-                                        operar.
-
-                                        <br><br>
-
-                                        🟡 Pases de prueba: Evalúa nuestras herramientas y plataformas antes de
-                                        comprometerte.
-
-                                        <br><br>
-
-                                        🟡 Operativa en vivo: Experimenta el trading en tiempo real bajo la supervisión
-                                        de
-                                        expertos.
-
-                                        <br><br>
-
-                                        🟡 Descuentos exclusivos: Ahorra en nuestras pruebas y servicios adicionales.
-
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
-                                <input type="radio" name="my-accordion-4" />
-                                <div class="collapse-title text-xl font-medium text-yellow-200">¿Se paga una
-                                    mensualidad?</div>
-                                <div class="collapse-content">
-                                    <p class="text-white text-xl font-light p-5">¡No! En TRX Academy no tendrás que
-                                        preocuparte por cuotas mensuales. Todos nuestros servicios están disponibles por
-                                        un único pago, lo que te brinda acceso completo sin tarifas recurrentes.</p>
-                                </div>
-                            </div>
-                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
-                                <input type="radio" name="my-accordion-4" />
-                                <div class="collapse-title text-xl font-medium text-yellow-200">¿Somos una academia
-                                    multinivel?</div>
-                                <div class="collapse-content">
-                                    <p class="text-white text-xl font-light p-5">No, no somos una academia multinivel.
-                                        Nuestro enfoque es 100% en tu formación y éxito en el Trading</p>
-                                </div>
-                            </div>
-                            <div class="collapse collapse-arrow join-item bg-stone-800 border-stone-700 border">
-                                <input type="radio" name="my-accordion-4" />
-                                <div class="collapse-title text-xl font-medium text-yellow-200">¿A donde me dirijo por
-                                    mas información?</div>
-                                <div class="collapse-content">
-                                    <p class="text-white text-xl font-light p-5">En nuestra sección de <a
-                                            href="#contacto" class="text-amber-400 font-semibold">contacto</a> puedes
-                                        hacernos llegar un correo o un WhatsApp</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- FOOTER -->
-            <div class="md:p-5 p-3">
-                <footer class="footer bg-neutral text-neutral-content items-center p-4 bg-stone-900 rounded-xl">
-                    <aside
-                        class="grid-flow-col items-center md:place-self-center md:justify-self-start justify-self-center">
-                        <a class="btn btn-ghost text-xl" href="#"><span class="text-amber-400 text-xl">TRX</span></a>
-                        <p>Copyright © 2024 - All right reserved</p>
-                    </aside>
-                    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end justify-self-center">
-                        <a href="#" target="_blank">
-                            <img src="./assets/img/ig.png" width="32" height="32" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="./assets/img/fb.png" width="32" height="32" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="./assets/img/tk.png" width="32" height="32" alt="">
-                        </a>
-                    </nav>
-                </footer>
-            </div>
-            <!--  -->
-
-        </div>
+        <!-- FOOTER -->
+        <footer class="footer bg-stone-800/50 items-center p-4">
+            <aside class="grid-flow-col items-center md:place-self-center md:justify-self-start justify-self-center">
+                <img src="./assets/img/trxLogo.webp" alt="logo" width="28" height="28">
+                <p class="text-slate-300 ms-2">TRX ACADEMY - Copyright © 2025 - All right reserved</p>
+            </aside>
+        </footer>
+        <!--  -->
 
         <!-- PROMO FUT -->
 
@@ -702,13 +668,20 @@
             </div>
         </div>
 
+        <script src="./assets/js/wow.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                new WOW().init();
+            });
+        </script>
         <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 
         <script>
             const swiper = new Swiper('.swiper', {
                 loop: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 slidesPerView: 1,
