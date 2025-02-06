@@ -35,6 +35,30 @@ body,
     height: 82vh;
 }
 
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Colores del gradiente */
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition:
+        transform 0.3s ease
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+}
+
+
 /* .contentSection{
     background: url('./assets/img//content.png');
     background-size: cover;

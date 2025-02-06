@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./main.css" rel="stylesheet" type="text/css" />
     <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="./assets/css/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/main.css" rel="stylesheet" type="text/css" />
     <script src="./assets/js/tailwind.js"></script>
 
     <script>
@@ -48,13 +49,9 @@
                 }
             }
         }
-
-        document.addEventListener('DOMContentLoaded', function () {
-        });
     </script>
 
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-
 
     <style>
         html {
@@ -73,27 +70,15 @@
 <body class="bg-stone-950">
     <div id="root">
 
+        <div class="floating-button bg-dark">
+            <a href="" target="_blank" class="Telegram">
+                <i class="fa-brands fa-telegram fa-2xl text-amber-400 fa-shake"></i>
+            </a>
+        </div>
+
         <!-- NAVBAR -->
         <div class="navbar bg-stone-800/50">
             <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#catalogo">Catalogo</a></li>
-                        <li><a href="#tienda">Tienda</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="#faqs">FAQs</a></li>
-                    </ul>
-                </div>
                 <img src="./assets/img/trxLogo.webp" class="rounded-lg" width="48" height="48" alt="Logo TRX ACADEMY">
             </div>
             <div class="navbar-end hidden lg:flex">
@@ -107,25 +92,50 @@
                     <li><a href="#faqs">FAQs</a></li>
                 </ul>
             </div>
+
+            <div class="navbar-end md:hidden flex">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-stone-900/90 text-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catalogo</a></li>
+                        <li><a href="#tienda">Tienda</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- SECTION 1 -->
 
         <section id="inicio" class="heroSection flex flex-col justify-center">
             <div class="p-6 md:p-20 ">
                 <div class="flex items-center">
-                    <h1 class="text-gray-100 text-5xl md:text-6xl font-black"><span class="text-amber-400">TRX</span>
+                    <h1 class="text-gray-100 text-4xl md:text-6xl font-black wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.0s">
+                        <span class="text-amber-400">TRX</span>
                         <span class="text-white font-light">|</span>
                         ACADEMY
                     </h1>
                 </div>
 
                 <div class="my-4">
-                    <h2 class="text-2xl md:text-3xl font-bold "><span class="text-amber-400">APRENDE
+                    <h2 class="text-lg md:text-3xl font-bold wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s"><span class="text-amber-400">APRENDE
                             TRADING CON LOS MEJORES</span></h2>
                 </div>
 
                 <div class="md:w-3/5 w-full mb-4">
-                    <h3 class="text-gray-100 md:text-xl text-lg font-regular py-2">
+                    <h3 class="text-gray-100 md:text-xl text-md font-regular py-2 wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.4s">
                         Domina el
                         Trading en Índices Sintéticos y Forex con nuestro curso intensivo. Aprende estrategias
                         efectivas, análisis técnico, fundamental e institucional. Prepárate para operar con
@@ -133,10 +143,14 @@
                 </div>
 
                 <div class="mt-5 flex flex-col md:flex-row gap-5">
-                    <a href="https://wa.me/573108838102" class="btn btn-warning btn-lg w-full md:w-auto ">INSCRIBETE
+                    <a href="https://wa.me/573108838102"
+                        class="btn btn-warning btn-lg w-full md:w-auto wow animate__animated animate__fadeInUp"
+                        data-wow-delay="0.1s">INSCRIBETE
                         AHORA <i class="fa-light fa-pen-to-square"></i></a>
 
-                    <a href="#faqs" class="btn btn-outline btn-warning btn-lg w-full md:w-auto">
+                    <a href="#faqs"
+                        class="btn btn-outline btn-warning btn-lg w-full md:w-auto wow animate__animated animate__fadeInUp"
+                        data-wow-delay="0.3s">
                         SABER MÁS <i class="fa-light fa-arrow-right"></i></a>
                 </div>
 
@@ -147,10 +161,11 @@
         <!-- SECTION 2 -->
         <section id="catalogo" class="">
             <div class="bg-stone-900">
-                <div class="flex w-full flex-col md:flex-row md:p-12 p-6 2xl:p-20">
+                <div
+                    class="flex w-full flex-col md:flex-row md:p-12 p-6 2xl:p-20 wow animate__animated animate__fadeInUp">
 
-                    <div class="grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
-                        <div class="p-20">
+                    <div class="grid flex-grow justify-center md:w-1/2">
+                        <div class="md:p-20 p-6">
                             <h4 class="md:text-4xl text-2xl text-amber-400 font-bold">INTRODUCCIÓN AL TRADING</h4>
                             <h5 class="md:text-xl text-md text-slate-100 font-regular my-4">Si estás dando tus
                                 primeros pasos en el trading, esta introducción te guiará para alcanzar tus metas.
@@ -166,8 +181,8 @@
 
                     <div class="divider lg:divider-horizontal 2xl:px-20"></div>
 
-                    <div class="grid flex-grow justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
-                        <div class="p-20">
+                    <div class="grid flex-grow justify-center md:w-1/2">
+                        <div class="md:p-20 p-6">
                             <h4 class="md:text-4xl text-2xl text-amber-400 font-bold">MODULOS<br> GRATIS</h4>
                             <h5 class="md:text-xl text-md text-slate-100 font-regular my-4">Prepárate y aprende sin
                                 costo las bases necesarias para avanzar con firmeza y confianza en el
@@ -189,7 +204,7 @@
 
                 <div
                     class="bg-stone-800 rounded-lg flex justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
-                    <div class="p-14">
+                    <div class="md:p-14 p-8">
                         <h4 class="md:text-3xl text-xl text-amber-400 font-bold">CURSO FOREX</h4>
                         <h5 class="md:text-lg text-sm text-slate-100 font-regular my-4">Domina el mercado de divisas y
                             opera con confianza. Aprende análisis técnico, estrategias rentables y gestión del riesgo
@@ -213,7 +228,7 @@
 
                 <div
                     class="bg-stone-800 rounded-lg flex justify-center md:w-1/2 wow animate__animated animate__fadeInUp">
-                    <div class="p-14">
+                    <div class="md:p-14 p-8">
                         <h4 class="md:text-3xl text-xl text-amber-400 font-bold">CURSO ÍNDICES SINTÉTICOS</h4>
                         <h5 class="md:text-lg text-sm text-slate-100 font-regular my-4">Sumérgete en el mundo del
                             trading de alta velocidad. Descubre cómo operar índices sintéticos y aprovecha su
@@ -240,7 +255,8 @@
         </section>
         <!-- SECTION 3 -->
         <section id="tienda">
-            <div class="bg-stone-900 md:p-12 p-6 2xl:p-20 flex">
+            <div
+                class="bg-stone-900 md:p-12 p-6 2xl:p-20 flex flex-col flex-col-reverse md:flex-row wow animate__animated animate__fadeInUp">
 
                 <div class="md:w-3/4 w-full">
                     <div class="mb-6">
@@ -303,20 +319,20 @@
                 <div class="md:w-1/4 w-full">
                     <div class="mb-4">
                         <p class="mb-1 text-slate-200">Buscar</p>
-                        <label class="input input-bordered bg-stone-700 text-slate-100 flex items-center gap-2">
+                        <label class="input input-bordered bg-stone-700 text-slate-100 flex items-center gap-2 w-full">
                             <input type="text" class="grow " placeholder="¿Que te interesa?" />
                             <i class="iconify" data-icon="tabler:search"></i></a>
                         </label>
                     </div>
-                    <div class="mb-4">
-                        <select class="select select-bordered bg-stone-700 text-slate-100 w-full max-w-xs">
+                    <div class="mb-4 w-full">
+                        <select class="select select-bordered bg-stone-700 text-slate-100 w-full">
                             <option disabled selected>Categoria</option>
                             <option>PDF</option>
                             <option>BOT</option>
                             <option>VIDEO</option>
                         </select>
                     </div>
-                    <div class="flex gap-5">
+                    <div class="flex  gap-5 w-full">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text me-2">Gratis</span>
@@ -338,7 +354,7 @@
         </section>
 
         <section id="testimonios">
-            <div class="md:p-12 p-6 2xl:p-20">
+            <div class="md:p-12 p-6 2xl:p-20 wow animate__animated animate__fadeInUp">
                 <div class="mb-6">
                     <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">TESTIMONIOS</h5>
                     <p class="md:text-lg text-md text-slate-100 font-light">Conoce los casos de exito y como los Traders
@@ -473,23 +489,24 @@
         </section>
 
         <section id="contacto">
-            <div class="bg-stone-900 md:p-12 p-6 2xl:p-20">
+            <div class="bg-stone-900 md:p-12 p-6 2xl:p-20 wow animate__animated animate__fadeInUp">
                 <div class="mb-6">
                     <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">CONTACTO</h5>
                     <p class="md:text-lg text-md text-slate-100 font-light">Aclara tus dudas y conoce a detalle todo lo
                         que tenemos que ofrecerte.</p>
                 </div>
 
-                <div class="w-full flex gap-10">
+                <div class="w-full flex md:flex-row flex-col gap-10">
                     <div
-                        class="md:w-1/4 bg-stone-800 flex flex-col flex-grow rounded-lg justify-center items-center gap-5 p-10">
+                        class="md:w-1/4 bg-stone-800 flex flex-col flex-grow rounded-lg justify-center items-center gap-5 md:p-10 p-6">
                         <h5 class="md:text-4xl text-2xl text-amber-500 font-black text-center">MIGUEL ROMANO</h5>
                         <button class="w-full btn btn-primary font-bold text-white flex items-center">
                             CONTÁCTAME AHORA
                             <i class="iconify" data-icon="file-icons:telegram"></i>
                         </button>
                     </div>
-                    <div class="md:w-3/4 bg-stone-800 flex flex-col rounded-lg justify-center items-center gap-5 p-10">
+                    <div
+                        class="md:w-3/4 bg-stone-800 flex flex-col rounded-lg justify-center items-center gap-5 md:p-10 p-6">
                         <div class="w-full">
                             <div class="flex md:justify-start justify-center mb-4">
                                 <h2 class="text-xl md:text-2xl font-semibold"><span class="text-amber-500">Escribeme un
@@ -548,7 +565,7 @@
         </section>
 
         <section id="faqs">
-            <div class="md:p-12 p-6 2xl:p-20">
+            <div class="md:p-12 p-6 2xl:p-20 wow animate__animated animate__fadeInUp">
                 <div class="mb-6">
                     <h5 class="md:text-3xl text-2xl text-amber-400 font-bold">FAQ's</h5>
                     <p class="md:text-lg text-md text-slate-100 font-light">¿Aún no estas seguro? Encuentra la respuesta
@@ -670,9 +687,7 @@
 
         <script src="./assets/js/wow.min.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                new WOW().init();
-            });
+            new WOW().init();
         </script>
         <script src="./assets/js/swiper-bundle.min.js"></script>
         <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
